@@ -1,0 +1,12 @@
+Para login
+	usuario: pamela.iglesias
+	pass: 123
+	login url: wordpress/wp-admin
+
+Para WP-Optimize-> Cache -> Compresión GZIP habilitar modulos apache 
+	mod_deflate
+	mod_filter
+
+Para WP-Optimize-> Cache -> Cabeceras de archivos estáticos habilitar modulos apache 
+	mod_headers
+	mod_expires

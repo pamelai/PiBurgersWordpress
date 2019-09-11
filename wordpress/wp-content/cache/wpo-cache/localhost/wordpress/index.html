@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="lang="es"">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pi Burgers</title>
+
+    <link rel="stylesheet" href="http://localhost/wordpress/wp-content/themes/piburger-child/style.css">
+    <link href="http://localhost/wordpress/wp-content/themes/piburger-child/favicon.ico" rel="icon" type="image/ico" />
+
+
+    <link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/localhost\/wordpress\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='http://localhost/wordpress/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel="stylesheet" type="text/css" href="//localhost/wordpress/wp-content/plugins/smart-slider-3/library/media/smartslider.min.css?1564681140" media="all" />
+<style type="text/css">.n2-ss-spinner-simple-white-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -20px;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+.n2-ss-spinner-simple-white {
+  outline: 1px solid RGBA(0,0,0,0);
+  width:100%;
+  height: 100%;
+}
+
+.n2-ss-spinner-simple-white:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -11px;
+    margin-left: -11px;
+}
+
+.n2-ss-spinner-simple-white:not(:required):before {
+    content: '';
+    border-radius: 50%;
+    border-top: 2px solid #333;
+    border-right: 2px solid transparent;
+    animation: n2SimpleWhite .6s linear infinite;
+}
+@keyframes n2SimpleWhite {
+    to {transform: rotate(360deg);}
+}</style><script type='text/javascript'>
+/* <![CDATA[ */
+var wpgmza_google_api_status = {"message":"Engine is not google-maps","code":"ENGINE_NOT_GOOGLE_MAPS"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://localhost/wordpress/wp-content/plugins/wp-google-maps/wpgmza_data.js?ver=5.2.2'></script>
+<script type='text/javascript' src='http://localhost/wordpress/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://localhost/wordpress/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='http://localhost/wordpress/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://localhost/wordpress/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://localhost/wordpress/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.2.2" />
+
+<script type="text/javascript">(function(){var N=this;N.N2_=N.N2_||{r:[],d:[]},N.N2R=N.N2R||function(){N.N2_.r.push(arguments)},N.N2D=N.N2D||function(){N.N2_.d.push(arguments)}}).call(window);if(!window.n2jQuery){window.n2jQuery={ready:function(cb){console.error('n2jQuery will be deprecated!');N2R(['$'],cb)}}}window.nextend={localization:{},ready:function(cb){console.error('nextend.ready will be deprecated!');N2R('documentReady',function($){cb.call(window,$)})}};</script><script type="text/javascript" src="//localhost/wordpress/wp-content/plugins/smart-slider-3/nextend/media/dist/n2.min.js?1564681152"></script>
+<script type="text/javascript" src="//localhost/wordpress/wp-content/plugins/smart-slider-3/nextend/media/dist/nextend-frontend.min.js?1564681152"></script>
+<script type="text/javascript" src="//localhost/wordpress/wp-content/plugins/smart-slider-3/library/media/dist/smartslider-frontend.min.js?1564681139"></script>
+<script type="text/javascript" src="//localhost/wordpress/wp-content/plugins/smart-slider-3/library/media/plugins/type/simple/simple/dist/smartslider-simple-type-frontend.min.js?1564681140"></script>
+<script type="text/javascript">N2R('documentReady',function($){N2R(["nextend-frontend","smartslider-frontend","smartslider-simple-type-frontend"],function(){new N2Classes.SmartSliderSimple('#n2-ss-3',{"admin":false,"translate3d":1,"callbacks":"","background.video.mobile":1,"align":"normal","isDelayed":0,"load":{"fade":1,"scroll":0},"playWhenVisible":1,"playWhenVisibleAt":0.5,"responsive":{"desktop":1,"tablet":1,"mobile":1,"onResizeEnabled":true,"type":"fullwidth","downscale":1,"upscale":1,"minimumHeight":0,"maximumHeight":768,"maximumSlideWidth":768,"maximumSlideWidthLandscape":768,"maximumSlideWidthTablet":768,"maximumSlideWidthTabletLandscape":768,"maximumSlideWidthMobile":768,"maximumSlideWidthMobileLandscape":768,"maximumSlideWidthConstrainHeight":0,"forceFull":1,"forceFullOverflowX":"body","forceFullHorizontalSelector":"body","constrainRatio":1,"sliderHeightBasedOn":"real","decreaseSliderHeight":0,"focusUser":1,"deviceModes":{"desktopPortrait":1,"desktopLandscape":0,"tabletPortrait":1,"tabletLandscape":0,"mobilePortrait":1,"mobileLandscape":0},"normalizedDeviceModes":{"unknownUnknown":["unknown","Unknown"],"desktopPortrait":["desktop","Portrait"],"desktopLandscape":["desktop","Portrait"],"tabletLandscape":["desktop","Portrait"],"tabletPortrait":["tablet","Portrait"],"mobileLandscape":["tablet","Portrait"],"mobilePortrait":["mobile","Portrait"]},"verticalRatioModifiers":{"unknownUnknown":1,"desktopPortrait":1,"desktopLandscape":1,"tabletPortrait":1,"tabletLandscape":1,"mobilePortrait":1,"mobileLandscape":1},"minimumFontSizes":{"desktopPortrait":4,"desktopLandscape":4,"tabletPortrait":4,"tabletLandscape":4,"mobilePortrait":4,"mobileLandscape":4},"ratioToDevice":{"Portrait":{"tablet":0.7,"mobile":0.5},"Landscape":{"tablet":0,"mobile":0}},"sliderWidthToDevice":{"desktopPortrait":1200,"desktopLandscape":1200,"tabletPortrait":840,"tabletLandscape":0,"mobilePortrait":600,"mobileLandscape":0},"basedOn":"combined","orientationMode":"width","overflowHiddenPage":0,"desktopPortraitScreenWidth":1200,"tabletPortraitScreenWidth":800,"mobilePortraitScreenWidth":440,"tabletLandscapeScreenWidth":800,"mobileLandscapeScreenWidth":440,"focus":{"offsetTop":"#wpadminbar","offsetBottom":""}},"controls":{"mousewheel":0,"touch":"horizontal","keyboard":1,"blockCarouselInteraction":1},"lazyLoad":0,"lazyLoadNeighbor":0,"blockrightclick":0,"maintainSession":0,"autoplay":{"enabled":1,"start":1,"duration":4000,"autoplayToSlide":-1,"autoplayToSlideIndex":-1,"allowReStart":0,"pause":{"click":0,"mouse":"0","mediaStarted":0},"resume":{"click":0,"mouse":0,"mediaEnded":1,"slidechanged":0}},"perspective":1500,"layerMode":{"playOnce":0,"playFirstLayer":1,"mode":"skippable","inAnimation":"mainInEnd"},"initCallbacks":[],"allowBGImageAttachmentFixed":false,"bgAnimationsColor":"RGBA(51,51,51,1)","bgAnimations":0,"mainanimation":{"type":"crossfade","duration":400,"delay":0,"ease":"easeOutQuad","parallax":0,"shiftedBackgroundAnimation":0},"carousel":1,"dynamicHeight":0})})});</script></head>
+<body>
+   <nav class="navbar navbar-expand-lg navbar-dark ">
+      <h1><a class="navbar-brand" href="http://localhost/wordpress">Pi Burgers</a></h1>
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+         <ul id="menu-nav" class="nav navbar-nav ml-auto mt-2 mt-lg-0"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-294" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home active menu-item-294 nav-item"><a title="Home" href="http://localhost/wordpress" class="nav-link">Home</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-291 nav-item"><a title="Menú" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-291">Menú</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-291" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-407" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-407 nav-item"><a title="Todo" href="http://localhost/wordpress/menu/" class="dropdown-item">Todo</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-295" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-295 nav-item"><a title="Burgers" href="http://localhost/wordpress/category/burgers/" class="dropdown-item">Burgers</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-296" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-296 nav-item"><a title="Grilled Hot Dogs" href="http://localhost/wordpress/category/grilled-hot-dogs/" class="dropdown-item">Grilled Hot Dogs</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-297" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-297 nav-item"><a title="Fries" href="http://localhost/wordpress/category/fries/" class="dropdown-item">Fries</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-289" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-289 nav-item"><a title="Contacto" href="http://localhost/wordpress/contacto/" class="nav-link">Contacto</a></li>
+</ul>
+      </div>
+   </nav>    <div id="home" >
+        <h2>Pi Burgers <span>Vos sabés como son</span></h2>
+        <div class="n2-section-smartslider " role="region" aria-label="Slider"><style>div#n2-ss-3{width:1200px;float:left;margin:0px 0px 0px 0px;}html[dir="rtl"] div#n2-ss-3{float:right;}div#n2-ss-3 .n2-ss-slider-1{position:relative;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;height:500px;border-style:solid;border-width:0px;border-color:#3e3e3e;border-color:RGBA(62,62,62,1);border-radius:0px;background-clip:padding-box;background-repeat:repeat;background-position:50% 50%;background-size:cover;background-attachment:scroll;}div#n2-ss-3 .n2-ss-slider-background-video-container{position:absolute;left:0;top:0;width:100%;height:100%;overflow:hidden;}div#n2-ss-3 .n2-ss-slider-2{position:relative;width:100%;height:100%;}.x-firefox div#n2-ss-3 .n2-ss-slider-2{opacity:0.99999;}div#n2-ss-3 .n2-ss-slider-3{position:relative;width:100%;height:100%;overflow:hidden;outline:1px solid rgba(0,0,0,0);z-index:10;}div#n2-ss-3 .n2-ss-slide-backgrounds,div#n2-ss-3 .n2-ss-slider-3 > .n-particles-js-canvas-el,div#n2-ss-3 .n2-ss-slider-3 > .n2-ss-divider{position:absolute;left:0;top:0;width:100%;height:100%;}div#n2-ss-3 .n2-ss-slide-backgrounds{z-index:10;}div#n2-ss-3 .n2-ss-slider-3 > .n-particles-js-canvas-el{z-index:12;}div#n2-ss-3 .n2-ss-slide-backgrounds > *{overflow:hidden;}div#n2-ss-3 .n2-ss-slide{position:absolute;top:0;left:0;width:100%;height:100%;z-index:20;display:block;-webkit-backface-visibility:hidden;}div#n2-ss-3 .n2-ss-layers-container{position:relative;width:1200px;height:500px;}div#n2-ss-3 .n2-ss-parallax-clip > .n2-ss-layers-container{position:absolute;right:0;}div#n2-ss-3 .n2-ss-slide{perspective:1500px;}div#n2-ss-3[data-ie] .n2-ss-slide{perspective:none;transform:perspective(1500px);}div#n2-ss-3 .n2-ss-slide-active{z-index:21;}</style><div id="n2-ss-3-align" class="n2-ss-align"><div class="n2-padding"><div id="n2-ss-3" data-creator="Smart Slider 3" class="n2-ss-slider n2-ow n2-has-hover n2notransition  n2-ss-load-fade " data-minFontSizedesktopPortrait="4" data-minFontSizedesktopLandscape="4" data-minFontSizetabletPortrait="4" data-minFontSizetabletLandscape="4" data-minFontSizemobilePortrait="4" data-minFontSizemobileLandscape="4" style="font-size: 1rem;" data-fontsize="16">
+        <div class="n2-ss-slider-1 n2-ss-swipe-element n2-ow" style="">
+                        <div class="n2-ss-slider-2 n2-ow">
+                                <div class="n2-ss-slider-3 n2-ow" style="">
+
+                    <div class="n2-ss-slide-backgrounds"></div><div data-first="1" data-slide-duration="0" data-id="15" style="" class=" n2-ss-slide n2-ss-canvas n2-ow  n2-ss-slide-15"><div class="n2-ss-slide-background n2-ow" data-mode="fill"><div data-hash="5e43138e65514e4f791a5ad60df02df0" data-desktop="//localhost/wordpress/wp-content/uploads/slider3/slider2.jpeg" class="n2-ss-slide-background-image" data-blur="0"><img src="//localhost/wordpress/wp-content/uploads/slider3/slider2.jpeg" alt="" /></div></div><div class="n2-ss-layers-container n2-ow" data-csstextalign="center" style=""></div></div><div data-slide-duration="0" data-id="16" style="" class=" n2-ss-slide n2-ss-canvas n2-ow  n2-ss-slide-16"><div class="n2-ss-slide-background n2-ow" data-mode="fill"><div data-hash="1dd3280fafc06ac7e948a5544069c721" data-desktop="//localhost/wordpress/wp-content/uploads/slider3/slider1.jpeg" class="n2-ss-slide-background-image" data-blur="0"><img src="//localhost/wordpress/wp-content/uploads/slider3/slider1.jpeg" alt="" /></div></div><div class="n2-ss-layers-container n2-ow" data-csstextalign="center" style=""></div></div>                </div>
+            </div>
+                    </div>
+        </div><div class="n2-clear"></div><div id="n2-ss-3-spinner" style="display: none;"><div><div class="n2-ss-spinner-simple-white-container"><div class="n2-ss-spinner-simple-white"></div></div></div></div></div></div><div id="n2-ss-3-placeholder" style="position: relative;z-index:2;background-color:RGBA(0,0,0,0);max-height:768px; background-color:RGBA(255,255,255,0);"><img style="width: 100%; max-width:768px; display: block;opacity:0;margin:0px;" class="n2-ow" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMCIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNTAwIiA+PC9zdmc+" alt="Slider" /></div></div>    </div>
+
+    <section class='row'>
+        <div class='col-12 col-lg-6'>
+            <h2>Nosotros</h2>
+
+            <div class='row'>
+                <p class='col-md-6 pr-md-3 col-lg-12 pr-lg-0'>Nació en 2012, la pasión por la gastronomía y el emprendimiento nos llevó a unirnos con MAXHENRI GROUP y así, ese mismo año, en el corazón de Palermo Soho abrimos nuestra primera tienda tras dos años de planear la apertura, convirtiéndonos en la primera hamburguesería GREEN de la Argentina. La pasión por la comida se vive a diario en nuestros locales, impulsada por el concepto de FastGood, que destaca lo rápido y bueno. </p>
+
+                <p class='col-md-6 pl-md-3 col-lg-12 pl-lg-0'>La elaboración de productos con altos estándares de calidad, la mezcla de ingredientes frescos, caseros y procesos artesanales nos permiten brindar a nuestros clientes una experiencia única, para que disfruten de las mejores hamburguesas, fries, hotdogs, limonadas, cervezas y vinos en un ambiente relajado y moderno, con la mejor música y atención personalizada.</p>
+            </div>
+        </div>
+        <div class='col-lg-6' id='nos'></div>
+    </section>
+
+    <section>
+        <h2>Nuestros especiales</h2>
+
+        <p>Disfrutá de nuestras mejores comidas con un 20% de descuento. <span>Válido del 31/07/2019 al 31/08/2019.</span></p>
+
+        
+        <div class="carousel slide" data-ride="carousel" id='especial'>
+            <ul class="carousel-inner">
+                                <li class="carousel-item active" data-interval="6000">
+                    <figure class='m-auto'><img src="http://localhost/wordpress/wp-content/uploads/2019/04/smoked_burger.jpg" alt="Smoked Burger" class='img-fluid'></figure>
+                </li>
+                                <li class="carousel-item " data-interval="6000">
+                    <figure class='m-auto'><img src="http://localhost/wordpress/wp-content/uploads/2019/04/pi_hotdog.jpg" alt="Pi HotDog" class='img-fluid'></figure>
+                </li>
+                                <li class="carousel-item " data-interval="6000">
+                    <figure class='m-auto'><img src="http://localhost/wordpress/wp-content/uploads/2019/04/fries2.jpg" alt="Fries" class='img-fluid'></figure>
+                </li>
+                            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Reviews</h2>
+
+        
+        <div class="carousel slide" data-ride="carousel">
+            <ul class="carousel-inner" id="rev">
+                            <li class="carousel-item active" data-interval="6000">
+                    <div>
+<div class="wp-block-image"><figure class="aligncenter"><img src="http://localhost/wordpress/wp-content/uploads/2019/08/sabri.png" alt="" class="wp-image-471"/><figcaption>Sabrina Introini</figcaption></figure></div>
+
+
+
+<p style="text-align:center">
+
+El lugar es agradable, suele haber mucha gente pero tienen un sistema eficiente que te avisa cuando está tu pedido. Los precios son razonables, la atención buena y los baños estaban limpios. Lo recomendaría.
+
+</p>
+</div>
+                </li>
+
+                            <li class="carousel-item " data-interval="6000">
+                    <div>
+<div class="wp-block-image"><figure class="aligncenter"><img src="http://localhost/wordpress/wp-content/uploads/2019/08/marga.png" alt="" class="wp-image-470"/><figcaption>Margarita Gracía del Río</figcaption></figure></div>
+
+
+
+<p style="text-align:center">
+
+Comí un combo de $229 y quedé fascinada. El sabor de la hamburguesa es increíble y el tamaño es el adecuado para un adulto. Las papas y su particular forma son más sabrosas que en cadenas similares y la limonada es una excelente alternativa. Muy recomendable.
+
+</p>
+</div>
+                </li>
+
+                            <li class="carousel-item " data-interval="6000">
+                    <div>
+<div class="wp-block-image"><figure class="aligncenter"><img src="http://localhost/wordpress/wp-content/uploads/2019/08/maik.png" alt="" class="wp-image-469"/><figcaption>Iván Pérez</figcaption></figure></div>
+
+
+
+<p style="text-align:center">
+
+El local es muy lindo y moderno. Tienen hamburguesas para todos los gustos. Hay opción vegetariana de hamburguesa de hongos, muy rica por cierto. Comida rápida con onda. Me gustó! Los precios son razonables. Lo recomiendo para ir con niños.
+
+</p>
+</div>
+                </li>
+
+                            <li class="carousel-item " data-interval="6000">
+                    <div>
+<div class="wp-block-image"><figure class="aligncenter"><img src="http://localhost/wordpress/wp-content/uploads/2019/08/madre.png" alt="" class="wp-image-468"/><figcaption>Susana Albizu</figcaption></figure></div>
+
+
+
+<p style="text-align:center">
+
+Buenas opciones de comida rápida. Las hamburguesas parecen caseras y las papas se pueden pedir de varias maneras. El local es muy limpio y espacioso, con onda familiar pero tranquilo.
+
+</p>
+</div>
+                </li>
+
+                            <li class="carousel-item " data-interval="6000">
+                    <div>
+<div class="wp-block-image"><figure class="aligncenter is-resized"><img src="http://localhost/wordpress/wp-content/uploads/2019/08/vanjie.png" alt="" class="wp-image-467" width="90" height="90"/><figcaption>Vanjie Mateo</figcaption></figure></div>
+
+
+
+<p style="text-align:center">
+
+No conocía el lugar y realmente me sorprendió gratamente. El local es muy amplio, cómodo, limpio y el personal es muy atento. Las opciones de menú son buenas, ya que la calidad es muy buena y los precios son razonables. Excelente local.
+
+</p>
+</div>
+                </li>
+
+                        </ul>
+        </div>
+    </section>
+
+<footer >
+   <p>Pi Burgers &copy;. Todos los derechos reservados 2019</p>
+</footer>
+
+<script src="http://localhost/wordpress/wp-content/themes/piburger-child/js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="http://localhost/wordpress/wp-content/themes/piburger-child/js/bootstrap.min.js"></script>
+<script src="http://localhost/wordpress/wp-content/themes/piburger-child/js/scripts.js"></script>
+
+<script type='text/javascript' src='http://localhost/wordpress/wp-includes/js/wp-embed.min.js?ver=5.2.2'></script>
+
+</body>
+</html>
+<!-- Cached by WP Optimize - https://getwpo.com - Last modified: Tue, 06 Aug 2019 01:50:57 GMT -->

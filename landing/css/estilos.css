@@ -1,0 +1,632 @@
+@font-face {
+   font-family: 'm';
+   src: url('../tipos/montserrat-regular-webfont.eot');
+   src: url('../tipos/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../tipos/montserrat-regular-webfont.woff2') format('woff2'),
+        url('../tipos/montserrat-regular-webfont.woff') format('woff'),
+        url('../tipos/montserrat-regular-webfont.ttf') format('truetype'),
+        url('../tipos/montserrat-regular-webfont.svg#m') format('svg');
+}
+@font-face {
+   font-family: 'ms';
+   src: url('../tipos/montserrat-semibold-webfont.eot');
+   src: url('../tipos/montserrat-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../tipos/montserrat-semibold-webfont.woff2') format('woff2'),
+        url('../tipos/montserrat-semibold-webfont.woff') format('woff'),
+        url('../tipos/montserrat-semibold-webfont.ttf') format('truetype'),
+        url('../tipos/montserrat-semibold-webfont.svg#ms') format('svg');
+}
+
+@font-face {
+   font-family: 'sant';
+   src: url('../tipos/SantEliaScript-Bold.eot');
+   src: url('../tipos/SantEliaScript-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../tipos/SantEliaScript-Bold.woff2') format('woff2'),
+        url('../tipos/SantEliaScript-Bold.woff') format('woff'),
+        url('../tipos/SantEliaScript-Bold.ttf') format('truetype'),
+        url('../tipos/SantEliaScript-Bold.svg#ms') format('svg');
+}
+
+*{
+   font-family: 'm', sans-serif;
+   font-size: 16px;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-weight: normal;
+   font-style: normal;
+   line-height: 1.25;
+}
+
+li{
+   list-style-type: none;
+}
+
+#pet,
+#rese,
+#contac{
+   padding: 0 15px;
+}
+
+section h2,
+h3{
+   color: #923a80;
+   padding-bottom: 5px;
+   border-bottom: 1px solid #d6d6d6;
+   margin: 20px 0;
+   font-size: 1.8em;
+}
+
+#combos h2, 
+#nos h2{
+   margin: 0 15px 15px 15px;
+   padding-top: 15px;
+}
+
+button:focus, 
+input:focus, 
+textarea:focus{
+   outline: none;
+}
+
+body::-webkit-scrollbar-thumb {
+   background: #4b4b4b;
+   border-radius: 5px;
+}
+
+body::-webkit-scrollbar-track {
+   background: #a8a8a8;
+   border-radius: 5px;
+}
+
+body::-webkit-scrollbar {
+   width: 8px;
+   height: 6px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+   background: #923a80;
+   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+body::-webkit-scrollbar-thumb:active {
+   background-color: #923a80;
+}
+
+
+/*************** LOADING ***************/
+@keyframes preloader {
+   0% {
+       transform: scale(1,1);
+   }
+   50% {
+       transform: scale(0.5,0.5);
+   }
+   100% {
+       transform: scale(1,1);
+   }
+}
+
+#contenido{
+   display: none;
+}
+
+#loading{
+   position: absolute;
+   color: #923a80;
+   text-align: center;
+   font-size: 1.2em;
+   background-color: white;
+   width: 100%;
+   height: 100%;
+   z-index: 100;
+   transition: opacity .8s ease-in-out;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+#loading p{
+   width: max-content;
+   margin: auto;
+   font-family: 'sant';
+   font-size: 1.3em;
+}
+
+#loading p i {
+  animation: preloader 2s infinite ;
+  color: #923a80;
+  font-size: 5em;
+  margin-bottom: 20px;
+  display:block;
+}
+
+
+/*************** HEADER ***************/
+#logo{
+   font-size: 0;
+   margin: 0;
+}
+
+header{
+   z-index: 20;
+   width: 100%;
+   background: #0e0d12;
+   height: 60px;
+   padding-top: 10px;
+   border-bottom: 2px solid #923a80;
+}
+
+header a{
+   color: white;
+}
+
+.navbar-brand{
+   color: white;
+   font-family: 'sant';
+   font-size: 1.8em;
+   margin: 0;
+   padding: 0;
+   margin-left: 10px;
+}
+
+.navbar-toggler{
+   margin-right: 10px;
+}
+
+.navbar-collapse.collapse.show{
+   background-color: rgba(0,0,0,0.9);
+   height: 100vh;
+   margin-top: 14px;
+   z-index: 100;
+}
+
+.navbar {
+   padding: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+   text-align: center;
+   font-size: 1.3em;
+   font-family: 'm';
+   color: white;
+   margin: 10px;
+   padding-bottom: 5px;
+   border-bottom: 1px solid transparent;
+}
+
+.navbar-dark .navbar-nav .nav-link:active,
+.navbar-dark .navbar-nav .nav-link:hover{
+   border-bottom: 1px solid #923a80;
+   color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus{
+   color: white;
+}
+
+.far.fa-bars{
+   color: white;
+   font-size: 1.2em;
+}
+
+
+/*************** SLIDER ***************/
+.carousel{
+   z-index: 2;
+}
+
+#carouselExampleCaptions .carousel-item{
+   height: calc(100vh - 60px);
+   background-size: cover;
+   max-width: calc(100% * 1.777777777777778‬);
+}
+
+#carouselExampleCaptions .carousel-inner> :first-child{
+   background: url(../img/banner_menu.jpg) no-repeat center center;
+}
+
+#carouselExampleCaptions .carousel-inner> :last-child{
+   background: url(../img/banner_perros.jpg) no-repeat center center;
+}
+
+#carouselExampleCaptions p {
+   display: none;
+}
+
+#carouselExampleCaptions a,
+input[type='submit']{
+   display: block;
+   color: white;
+   background-color: #923a80;
+   padding: 10px 0;
+   width: 150px;
+   margin:10px auto;
+   border-radius: 5px;
+   border: 1px solid transparent;
+   transition: .20s linear;
+}
+
+#carouselExampleCaptions a:hover,
+#carouselExampleCaptions a:active,
+input[type='submit']:hover,
+input[type='submit']:active{
+   text-decoration: none;
+   background: rgba(0,0,0,0.5);
+   border: 1px solid #923a80;
+   color: #923a80;
+   font-family: 'ms';
+}
+
+#arriba{
+   position: sticky;
+   top: 0;
+   z-index: 1;
+}
+
+#arriba a{
+   display: block;
+   background: url(../img/fondo-flecha.png) repeat-x;
+   width: 100%;
+   height: 40px;
+   text-align: center;
+}
+
+#arriba a i{
+   color: #923a80;
+   font-size: 2em;
+   line-height: 30px
+}
+
+/*************** CARACTERISTICAS ***************/
+#nos> p{
+   margin: 0 15px 20px 15px;
+}
+
+#nos .row a{
+   color: #923a80;
+}
+
+.aligncenter,
+#nos p{
+   text-align: center;
+}
+
+.aligncenter figcaption{
+   margin-top: 10px;
+   font-family: 'ms';
+   font-size: 1.2em;
+   color: #923a80;
+}
+
+#nos ul{
+   max-width: max-content;
+   margin: auto;
+}
+
+#nos ul li{
+   display: flex;
+   align-items: center;
+}
+
+#nos ul li i{
+   font-size: .5em;
+   color: #923a80;
+   margin-right: 5px;
+}
+
+
+
+
+/*************** PROMOCIONES ***************/
+#combos img,
+#pet img{
+   width: 100%;
+   max-width: 300px;
+}
+
+#combos .col-12> p> :last-child{
+   font-size: 1.3em;
+   color: #923a80;
+   margin-top: 15px;
+   display: block;
+   font-family: 'ms';
+}
+
+#combos span{
+   display: block;
+}
+
+#combos .mas{
+   color: #923a80;
+   font-family: 'ms';
+   font-size: 1.3em;
+   display: inline;
+}
+
+
+/*************** PETFRIENDLY ***************/
+#pet h3{
+   font-size: 1.5em;
+}
+
+
+/*************** RESEÑAS ***************/
+#reviews{
+   height: 280px;
+   width: 100%;
+   z-index: auto;
+}
+
+
+/*************** CONTACTO ***************/
+#contac h2{
+   margin-bottom: 0;
+}
+
+.ok{
+   color: #61f161;
+   text-align: center;
+   height: 45px;
+   line-height: 45px;
+   font-family: 'ms';
+}
+
+.error{
+   color: #ff3d3d;
+   text-align: center;
+   height: 20px;
+   line-height: 20px;
+   font-size: .8em;
+}
+
+form span{
+   color: #923a80;
+}
+
+form{
+   max-width:546px;
+   margin: auto;
+}
+
+input{
+   height: 35px;
+}
+
+input[type='text'],
+input[type='email'],
+textarea{
+   width: 100%;
+   border: 1px solid #d6d6d6;
+   border-radius: 5px;
+   padding: 5px
+}
+
+textarea{
+   resize: none;
+   height: 120px
+}
+
+input[type='text']{
+   margin-bottom: 20px;
+}
+
+label{
+   font-family: 'ms';
+   font-size: 1.1em;
+}
+
+input[type='submit']{
+   padding: 0;
+   margin: 10px auto 30px auto;
+   font-family: 'ms'
+}
+
+input[type='submit']:hover,
+input[type='submit']:active{
+   background: none;
+}
+
+iframe{
+   border: none;
+   width: 100%;
+   height: 400px;
+}
+
+
+/*************** FOOTER ***************/
+footer{
+   height: 100px;
+   border-top: 2px solid #923a80;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px 0 10px 0;
+   background: #0e0d12;
+}
+
+footer p{
+   color: white;
+   font-size: 0.7em;
+   text-align: center;
+}
+
+footer ul{
+   display: flex;
+   justify-content: space-between;
+}
+
+footer ul{
+   width: 150px;
+}
+
+footer a{
+   display: block;
+   background: url(../img/redes.png) no-repeat;
+   height: 30px;
+   width: 30px;
+   text-indent: -9000px;
+}
+
+a[href*="twitter"]{
+   background-position: -30px 0;
+}
+
+a[href*='instagram']{
+   background-position: -60px 0;
+}
+
+
+@media screen and (min-width: 700px){
+   #pet .has-2-columns{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 35px;
+      max-width: 1000px;
+      margin: auto;
+   }
+}
+
+
+@media screen and (min-width: 992px){
+   #pet,
+   #rese,
+   #contac{
+      padding: 10px 30px;
+   }
+
+   #combos h2, 
+   #nos h2{
+      margin: 0 30px 30px 30px;
+      padding-top: 30px;
+   }
+
+   #nos> p{
+      margin: 0 30px 20px 30px;
+   }
+   
+   #carouselExampleCaptions p {
+      display: block;
+   }
+
+   
+/*************** HEADER ***************/
+   .navbar-collapse{
+      justify-content: flex-end;
+   }
+
+   .navbar-dark .navbar-nav .nav-link{
+      font-size: 1em;
+      margin:0;
+      border:none;
+      transition: .20s linear;
+   }
+   
+   .navbar-dark .navbar-nav .nav-link:active,
+   .navbar-dark .navbar-nav .nav-link:hover{
+      color: #923a80;
+      border:none;
+   }
+
+   .navbar-expand-lg .navbar-nav{
+      width: 500px;
+      justify-content: space-between;
+   }
+
+
+/*************** CONTACTO ***************/
+   #contac> :last-child{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 35px;
+   }
+
+   form{
+      max-width: none;
+      width: 100%;
+   }
+}
+
+
+@media screen and (min-width: 1024px){
+   #carouselExampleCaptions .carousel-item{
+      max-width: calc(100% * 1.778645833333333‬);
+   }
+   
+   #carouselExampleCaptions .carousel-inner> :first-child{
+      background: url(../img/banner_menu2.jpg) no-repeat center center;
+   }
+   
+   #carouselExampleCaptions .carousel-inner> :last-child{
+      background: url(../img/banner_perros2.jpg) no-repeat center center;
+   }
+
+/*************** RESEÑAS ***************/
+   #reviews{
+      background: url(../img/fondo_review.jpg) no-repeat center center;
+      height: 492px;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   #reviews{
+      background: url(../img/fondo_review.jpg) no-repeat center center;
+      height: 492px;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   #reviews ul{
+      max-width: 910px;
+      margin: auto;
+      color: white;
+   }
+
+   #reviews li{
+      background: rgba(0,0,0,0.8);
+      border-radius: 5px;
+      padding: 80px;
+   }
+
+}
+@media screen and (min-width: 1200px){
+/*************** RESEÑAS ***************/
+   #rese .carousel ul{
+      grid-template-columns: repeat(3, 1fr);
+   }
+
+/*************** CONTACTO ***************/
+   #contac> div{
+      grid-template-columns: 1fr 1.5fr;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

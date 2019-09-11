@@ -1,0 +1,612 @@
+/*
+Theme Name: PiBurger
+Author: pamela.iglesias
+Description: Tema para un local de comidas rápidas
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: piburger
+*/
+@import url("css/bootstrap.css");
+
+/*----------- GENERAL -----------*/
+@font-face {
+   font-family: 'm';
+   src: url('tipos/montserrat-regular-webfont.eot');
+   src: url('tipos/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('tipos/montserrat-regular-webfont.woff2') format('woff2'),
+        url('tipos/montserrat-regular-webfont.woff') format('woff'),
+        url('tipos/montserrat-regular-webfont.ttf') format('truetype'),
+        url('tipos/montserrat-regular-webfont.svg#m') format('svg');
+}
+@font-face {
+   font-family: 'ms';
+   src: url('tipos/montserrat-semibold-webfont.eot');
+   src: url('tipos/montserrat-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('tipos/montserrat-semibold-webfont.woff2') format('woff2'),
+        url('tipos/montserrat-semibold-webfont.woff') format('woff'),
+        url('tipos/montserrat-semibold-webfont.ttf') format('truetype'),
+        url('tipos/montserrat-semibold-webfont.svg#ms') format('svg');
+}
+
+@font-face {
+   font-family: 'sant';
+   src: url('tipos/SantEliaScript-Bold.eot');
+   src: url('tipos/SantEliaScript-Bold.eot?#iefix') format('embedded-opentype'),
+        url('tipos/SantEliaScript-Bold.woff2') format('woff2'),
+        url('tipos/SantEliaScript-Bold.woff') format('woff'),
+        url('tipos/SantEliaScript-Bold.ttf') format('truetype'),
+        url('tipos/SantEliaScript-Bold.svg#ms') format('svg');
+}
+
+.customize-support::-webkit-scrollbar-thumb {
+   background: #4b4b4b;
+   border-radius: 5px;
+}
+
+.customize-support::-webkit-scrollbar-track {
+   background: #a8a8a8;
+   border-radius: 5px;
+}
+
+.customize-support::-webkit-scrollbar {
+   width: 8px;
+   height: 6px;
+}
+
+.customize-support::-webkit-scrollbar-thumb:hover {
+   background: #923a80;
+   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.customize-support::-webkit-scrollbar-thumb:active {
+   background-color: #923a80;
+}
+
+*{
+   font-family: 'm', sans-serif;
+   font-size: 16px;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-weight: normal;
+   font-style: normal;
+   line-height: 1.25;
+}
+
+a{
+   color: black;
+   text-decoration: none;
+   display: block;
+   width: max-content;
+}
+
+li{
+   list-style-type: none;
+   width: max-content;
+}
+
+figure{
+   font-size: 0;
+   text-align: center;
+   width: max-content;
+}
+
+section{
+   margin: 25px;
+}
+
+.row{
+   margin: 0;
+}
+
+section h2,
+h3{
+   color: #923a80;
+   border-bottom: 1px solid #a1a1a1;
+   padding-bottom: 5px;
+   font-size: 1.5em;
+   margin-bottom: 20px;
+}
+
+img{
+   width: 100%;
+}
+
+
+/************ NAVBAR ************/
+.navbar{
+   padding: 0;
+   height: 60px;
+   border-bottom: 3px solid #923a80;
+   padding: 0 40px;
+   background-color: #0e0d12;
+
+}
+
+.navbar-brand{
+   font-family: 'sant';
+   color: white;
+   font-size: 32px;
+}
+
+.navbar-collapse{
+   width: 100vw;
+   height: calc(100vh - 60px);
+   position: absolute;
+   top: 60px;
+   right: 0;
+   background: rgba(0,0,0,0.9); 
+   overflow: hidden;
+   z-index: 3;
+}
+
+.nav-link,
+.dropdown-item{
+   height: 45px;
+   width: calc(100vw - 20px);
+   text-align: center;
+   color: white;
+   padding: 0;
+   line-height: 45px;
+   letter-spacing: 1px;
+   border: 1px solid transparent;
+   text-decoration: none !important;
+}
+
+.nav-link{
+   font-size: 1.2em;
+   font-family: 'ms';
+}
+
+
+.dropdown-item:active,
+.nav-link:active,
+.dropdown-menu.show .active a,
+#menu-nav> :nth-child(2) a[aria-expanded="true"]{
+   border-bottom: 1px solid #923a80;
+}
+
+
+/************ HOME ************/
+#home .n2-ss-slider-1.n2-ss-swipe-element.n2-ow.n2-grab{
+   height: calc(100vh - 60px) !important;
+}
+
+#home h2{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    font-size: 3em;
+    font-family: 'sant';
+    color: white;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+}
+
+#home h2 span{
+    display: block;
+    font-family: 'm';
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+.carousel::after{
+   background: none;
+}
+
+#home+.row{
+   margin: 25px;
+}
+
+#home+section+section p{
+   text-align: center;
+   margin-bottom: 30px;
+}
+
+#home+section+section p span{
+   display: block;
+   font-size: 0.8em;
+   margin-top: 5px;
+}
+
+#rev{
+   min-height: 300px;
+   display: flex;
+   align-items: center;
+}
+
+#rev li{
+   text-align: center;
+}
+
+#rev li> div{
+   max-width: 900px;
+   margin: auto;
+}
+
+#rev .wp-block-image img{
+   max-width: 90px;
+}
+
+#rev .wp-block-image figcaption{
+   display: block;
+   color:black;
+   font-family: 'ms';
+   font-size: 17px
+}
+
+
+/************ CATEGORIAS ************/
+.encabezado{
+   background: url(img/menu.jpg) no-repeat center center;
+   background-size: cover;
+   max-width: calc(100% * 2.56px);
+   height: 400px;
+   position: relative;
+}
+
+.encabezado h2{
+    position: absolute;
+    top:calc(50% - 38.4px);
+    font-size: 2em;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+#menu+section{
+   min-height: 100vh;
+}
+
+.platos{
+   max-width: 538px;
+   margin: auto;
+}
+
+.platos li a{
+   display: inline;
+}
+
+.platos li a figure{
+   width: auto;
+}
+
+.platos img{
+   max-width: 250px;
+}
+
+.platos li{
+   padding: 10px;
+}
+
+
+/************ MENU ************/
+#menu+section> h3:nth-of-type(2),
+#menu+section> h3:nth-of-type(3),
+#menu+section> h3:nth-of-type(4){
+   margin-top: 30px;
+}
+
+
+/************ DETALLES ************/
+#detalle+section>p {
+   text-align: right;
+}
+
+.alignnone.size-full{
+   max-width: 500px;
+   height: auto;
+}
+
+#detalle+section div :first-child{
+   text-align: center;
+}
+
+#detalle+section div :last-child span{
+   display: block;
+   font-weight: bold;
+   margin-top: 20px;
+}
+
+#detalle+section+section h3{
+   padding-top:10px;
+}
+
+.media img {
+   max-width: 96px;
+}
+
+.btn-piburger,
+#comentario,
+#autor,
+#email{
+   border-radius: 5px
+}
+
+.btn-piburger{
+   width:150px;
+}
+
+#comentario{
+   height: 130px;
+}
+
+#commentform{
+   display:grid;
+}
+
+#commentform> :first-child{
+   grid-row-start: 3;
+}
+
+label[for='comentario'],
+label[for='autor'],
+label[for='email']{
+   font-weight: bold;
+}
+
+.form-submit{
+   text-align: right;
+}
+
+#reply-title{
+   border: none;
+}
+
+.logged-in-as{
+   color: #923a80;
+}
+
+.logged-in-as a,
+#detalle+section p a{
+   display: inline-block;
+   color: #923a80;
+   border-bottom: 1px solid transparent;
+   transition: .10s linear;
+}
+
+.logged-in-as a:hover,
+.logged-in-as a:active,
+#detalle+section p a:hover,
+#detalle+section p a:active{
+   border-bottom: 1px solid #923a80;
+}
+
+.media-body h4{
+   font-size: 1em;
+   font-weight: bold;
+}
+
+
+/************ 404 ************/
+#error404{
+   height: calc(100vh - 60px);
+   background-size: cover;
+   background: url(img/404.jpg) no-repeat center center;
+   max-width: calc(100% * 1.333333333333333);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+#error404 h2,
+#error404 p{
+    color: white;
+    text-align: center;
+}
+
+#error404 h2{
+    font-size: 3.5em;
+}
+
+#error404 p{
+    margin-top: 70px;
+    font-size: 1.15em;
+}
+
+
+/************ FOOTER ************/
+footer{
+   height: 80px;
+   border-top: 3px solid #923a80;
+   background: black;
+   display: flex;
+   flex-direction: column;
+   justify-content: center
+}
+
+footer p{
+   color: white;
+   font-size: 0.7em;
+   text-align: center;
+   margin: 0;
+}
+
+
+@media screen and (min-width: 768px){
+/************ HOME ************/
+   #especial .carousel-inner{
+      display:grid; 
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 20px;
+      max-width: 790px;
+      margin: auto;
+   }
+
+   #especial .carousel-inner li,
+   #especial .carousel-inner figure{
+      width: auto;
+   }
+
+
+/************ CATEGORIAS ************/
+   .platos{
+      max-width: 787px;
+   }
+
+
+/************ DETALLES ************/
+   #detalle+section div{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      grid-column-gap: 20px;
+      max-width: 936px;
+      margin: auto;
+   }
+
+/*----------- 404 -----------*/   
+   #error404 p{
+      font-size: 1.3em;
+   }
+}
+
+
+@media screen and (min-width: 992px){
+/************ GRAL ************/
+   section{
+      margin: 40px;
+   }
+
+
+/************ NAVBAR ************/
+   .navbar-collapse{
+      width: auto;
+      height: initial;
+      position: initial;
+      background: transparent; 
+      overflow: visible;
+      z-index: 3;
+   }
+   
+   .nav-link,
+   .dropdown-item{
+      height: 60px;
+      text-align: center;
+      color: white;
+      padding: 0;
+      line-height: 60px;
+      letter-spacing: 1px;
+      border: none;
+      font-size: 1em;
+   }
+   
+   .nav-link{
+      font-family: 'ms';
+      width: 100px;
+   }
+
+   .dropdown-item{
+      width: max-content;
+   }
+   
+   .dropdown-item:active,
+   .dropdown-item:hover,
+   .nav-link:active,
+   .nav-link:hover,
+   .dropdown-menu.show .active a,
+   #menu-nav> :nth-child(2) a[aria-expanded="true"]{
+      color: #923a80 !important;
+      border: none;
+   }
+   
+
+   .dropdown-menu{
+      padding: 0 15px;
+      margin: 0;
+      background-color: rgba(0,0,0,0.9);
+      border-radius: 5px;
+      right: calc(50% - 90px);
+      left:auto;
+   }
+
+   .dropdown-menu li{
+      margin: auto;
+   }
+
+
+/************ HOME ************/
+   #home+.row{
+      margin: 40px;
+   }
+
+   #rev{
+      background: url(img/rewies.jpg) no-repeat center center;
+      height: 492px;
+      max-width: 1289px;
+   }
+  
+   #rev li,
+   #rev .wp-block-image figcaption{
+      color: white;
+   }
+
+   #rev li> div{
+      background: rgba(0,0,0,0.8);
+      border-radius: 5px;
+      max-width: 910px;
+      margin: auto;
+      padding: 80px;
+   }
+
+   #nos{
+      background: url(img/nosotros.jpg) no-repeat right;
+      height: 500px;
+   }
+
+   #home+section> :first-child{
+      align-self: center;
+   }
+
+   #especial .carousel-inner{
+      grid-column-gap: 35px;
+      max-width: 912px;
+   }
+
+
+/************ CATEGORIAS ************/
+   .platos{
+      max-width: 1080px;
+   }
+
+
+/************ DETALLES ************/
+   #detalle+section div{
+      grid-column-gap: 30px;
+      max-width: 930px;
+   }
+
+
+/************ CONTACTO ************/
+   #sidebar{
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      grid-column-gap: 20px;
+   }
+
+   #wpgmza_map{
+      width: calc(60vw - 50px) !important;
+      height: 370px !important;
+   }
+
+   #sidebar > :last-child{
+      margin: 0;
+   }
+
+   #wpforms-184-field_0-container{
+      padding-top: 0;
+   }
+}
+
+
+@media screen and (min-width: 1024px){
+/*----------- 404 -----------*/
+   #error404{
+      background: url(img/4042.jpg) no-repeat center center;
+      max-width: calc(100% * 1.778645833333333);
+   }
+
+}

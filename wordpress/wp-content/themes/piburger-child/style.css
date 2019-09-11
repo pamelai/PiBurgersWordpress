@@ -1,0 +1,116 @@
+/* Theme Name: PiBurger Child 
+Theme URI: http://example.com/piburger-child/ 
+Template: piburger
+Description: Tema hijo para un local de comidas rápidas
+Theme Author: pamela.iglesias
+Author URI: https://example.org/
+Version: 1.0.0 
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: piburger
+Tags: light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready, food*/ 
+
+@import url("../piburger/style.css");
+
+
+/************ CONTACTO ************/
+#contacto+section>p{
+   text-align: center;
+   font-size: 1.1em;
+   font-family: 'ms';
+   margin-bottom: 30px;
+}
+
+#wpgmza_map{
+   width: calc(100vw - 50px) !important;
+}
+
+#sidebar> :last-child{
+   width: 100%;
+   margin-top: 20px;
+}
+
+#wpforms-184-field_2{
+   resize: none;
+}
+
+div.wpforms-container-full .wpforms-form .wpforms-required-label{
+   color:#923a80 !important;
+}
+
+div.wpforms-container-full .wpforms-form input[type="text"],
+div.wpforms-container-full .wpforms-form input[type="email"],
+div.wpforms-container-full .wpforms-form textarea{
+   border-radius: 5px;
+   border: 1px solid grey;
+
+}
+
+div.wpforms-container-full .wpforms-form button[type="submit"],
+#error404 a{
+   margin: auto;
+   color: white !important;
+   background: #923a80 !important;
+   border: 1px solid #923a80 !important;
+   font-family: 'ms';
+   letter-spacing: 1px;
+   height: 40px;
+   border-radius: 5px;
+   transition: .5s ease; 
+   cursor: pointer;
+   display: block;
+   width: 150px;
+}
+
+div.wpforms-container-full .wpforms-form button[type="submit"]:hover,
+div.wpforms-container-full .wpforms-form button[type="submit"]:active,
+#error404 a:hover,
+#error404 a:active{
+   color: #923a80 !important;
+   background: transparent !important;
+}
+
+#contacto+section h3+ul a{
+    background: url(img/redes.png) no-repeat;
+    height: 30px;
+    width: 30px;
+    text-indent: -9000px;
+    transition: .2s linear;
+}
+
+a[href="#tw"],
+#contacto+section h3+ul li:nth-of-type(2) a{
+    background-position: -30px 0;
+}
+
+a[href="#ig"],
+#contacto+section h3+ul li:nth-of-type(3) a{
+    background-position: -60px 0;
+}
+
+#error404 a{
+   margin-top: 70px;
+   line-height: 40px;
+}
+
+@media screen and (min-width: 992px){
+/************ CONTACTO ************/
+   #sidebar{
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      grid-column-gap: 20px;
+   }
+
+   #wpgmza_map{
+      width: calc(60vw - 50px) !important;
+      height: 370px !important;
+   }
+
+   #sidebar > :last-child{
+      margin: 0;
+   }
+
+   #wpforms-184-field_0-container{
+      padding-top: 0;
+   }
+}
